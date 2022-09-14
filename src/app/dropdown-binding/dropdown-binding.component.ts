@@ -20,13 +20,13 @@ export class DropdownBindingComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(BindingDetailsComponent, {
-      height: '85%',
+      height: '90%',
       width: '70%',
       data: this.binding
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
     });
   }
 

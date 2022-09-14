@@ -28,7 +28,6 @@ import { DropdownBindingComponent } from './dropdown-binding/dropdown-binding.co
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-
 @NgModule({
   declarations: [
     AppComponent,
