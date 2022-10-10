@@ -17,7 +17,7 @@ export class AppComponent {
   selectedEdition = 'Edition';
   selectedLanguage = 'en';
   fhirServers = [
-    { name: "SNOMED Public Browser", url: "https://snowstorm.ihtsdotools.org/fhir"},
+    { name: "SNOMED Public", url: "https://snowstorm.ihtsdotools.org/fhir"},
     // { name: "CSIRO Ontoserver R4", url: "https://r4.ontoserver.csiro.au/fhir"},
   ];
   selectedServer = this.fhirServers[0];
@@ -83,7 +83,7 @@ export class AppComponent {
   }
 
   setEdition(edition: any) {
-    this.selectedEdition = edition.resource.title;
+    this.selectedEdition = edition.resource.title?.replace('SNOMED CT release ','');
     this.terminologyService.setFhirUrlParam(edition.resource.version);
   }
 
